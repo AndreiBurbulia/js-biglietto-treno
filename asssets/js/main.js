@@ -1,7 +1,12 @@
 //Chiedere l'eta del passegero
 var etaPersona = parseInt(prompt("Inserisci la tua Età!"));
-document.getElementById("eta_passegero").innerHTML = etaPersona
-
+if (etaPersona > 120) {
+    document.getElementById("eta_passegero").innerHTML = "Sicuro di essere umano?"
+} else if (etaPersona < 0) {
+    document.getElementById("eta_passegero").innerHTML = "Sicuro di essere nato?"
+} else {
+    document.getElementById("eta_passegero").innerHTML = etaPersona
+}
 //chiedere quanti km vuole percorere in totale
 var quantitaKm = parseInt(prompt("Inserisci quanti km vuoi percorere!"));
 document.getElementById("km_da_percorere").innerHTML = quantitaKm
@@ -31,10 +36,6 @@ if (!isNaN(etaPersona) && !isNaN(quantitaKm)) {
         document.getElementById("prezzo_biglietto").innerHTML = prezzoBiglietto.toFixed(2);
     }
 }
-
-
-
-
 
 //l'output del prezzo deve avere solo due cifre decimali
 //con "(qui ci va il numero da arrotondare) .toFixed(qui vanno specificate quanti numeri dopo la virgola)"
