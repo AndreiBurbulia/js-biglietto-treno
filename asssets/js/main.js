@@ -11,7 +11,7 @@ document.getElementById("km_da_percorere").innerHTML = quantitaKm
 if (isNaN(etaPersona) || isNaN(quantitaKm)) {
     alert("Hai inserito dei valori non validi!");
 }
-
+//se entrambi i valori sono due numeri allora posso proccedere a fare il calcolo
 if (!isNaN(etaPersona) && !isNaN(quantitaKm)) {
     //calcolare il prezzo del biglietto
     //prezzo biglietto 0.21 per km
